@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        quicksand: ["Quicksand", "sans-serif"],
+      },
+      maxWidth: {
+        1500: "1500px",
+      },
+    },
   },
   plugins: [],
 }

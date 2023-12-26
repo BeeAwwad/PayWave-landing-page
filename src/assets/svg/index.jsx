@@ -1,11 +1,13 @@
-export const EyePhoneSvg = () => {
+import PropTypes from "prop-types"
+
+export const EyePhoneSvg = ({ className }) => {
   return (
     <svg
       width="728"
       viewBox="0 0 169 228"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-24"
+      className={className}
     >
       <g id="phone">
         <g id="phone_2" filter="url(#filter0_d)">
@@ -257,4 +259,8 @@ export const EyePhoneSvg = () => {
       </defs>
     </svg>
   )
+}
+
+EyePhoneSvg.propTypes = {
+  className: PropTypes.string,
 }

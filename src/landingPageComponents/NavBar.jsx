@@ -1,7 +1,7 @@
 function NavBar() {
   return (
     <>
-      <nav>
+      <nav className="hidden lg:block">
         <ul className="flex space-x-6">
           <li>
             <a href="#home">Home</a>

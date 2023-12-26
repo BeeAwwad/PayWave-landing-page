@@ -2,17 +2,20 @@ import { EyePhoneSvg } from "../assets/svg"
 
 const Main = () => {
   return (
-    <main className="">
-      <section id="home" className="bg-gray-100 py-12">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4">Welcome to PayWave</h1>
-          <p className="text-lg">
+    <main className="font-quicksand">
+      <section id="home" className="bg-[#bebebe] flex flex-col md:flex-row">
+        <div className="container mx-auto text-center flex-col md:flex-row">
+          <h1 className="text-[#094067] text-4xl md:text-5xl font-bold mb-4">
+            Revolutionize Your Finances with PayWave
+          </h1>
+          <p className="text-lg text-[#5f6c7b]">
             Streamline your financial transactions, savings, and investments all
             in one place.
           </p>
-          {/* Add more content as needed */}
         </div>
-        <EyePhoneSvg />
+        <div className="w-full md:w-[50%]">
+          <EyePhoneSvg className="w-full mx-auto mb-4" />
+        </div>
       </section>
 
       <section id="features" className="py-12">

@@ -1,17 +1,20 @@
 import NavBar from "./NavBar"
+import Button from "./reusables/Button"
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="logo">
-          <img src="paywave_logo.png" alt="PayWave Logo" className="h-8" />
+    <header className="bg-gray-900 text-white font-quicksand flex items-center justify-center h-16 lg:h-14">
+      <div className="w-full flex justify-between items-center mx-auto my-0 px-5 md:px-10 lg:px-14 max-w-1500">
+        <div className="flex">
+          <div className="logo">
+            <img src="paywave_logo.png" alt="PayWave Logo" className="h-8" />
+          </div>
+          <NavBar />
         </div>
-        <NavBar />
-        <div className="cta-button">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
-            Get Started
-          </button>
+        <div>
+          <Button className={"hidden lg:block"} onClick={() => {}}>
+            Get started free
+          </Button>
         </div>
       </div>
     </header>
