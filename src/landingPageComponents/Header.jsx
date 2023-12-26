@@ -3,7 +3,7 @@ import Button from "./reusables/Button"
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white font-quicksand flex items-center justify-center h-16 lg:h-14">
+    <header className="bg-[#fffffe] text-[#094067] font-quicksand flex items-center justify-center h-16 lg:h-14">
       <div className="w-full flex justify-between items-center mx-auto my-0 px-5 md:px-10 lg:px-14 max-w-1500">
         <div className="flex">
           <div className="logo">
