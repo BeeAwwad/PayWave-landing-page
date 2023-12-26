@@ -18,7 +18,7 @@ const Main = () => {
           </Button>
         </div>
         <div className="w-full lg:w-[50%]">
-          <EyePhoneSvg className="w-[70%] mx-auto mb-4" />
+          <EyePhoneSvg className="w-[80%] mx-auto mb-4" />
         </div>
       </section>
 
