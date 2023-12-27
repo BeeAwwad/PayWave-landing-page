@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <main className="font-quicksand">
       <section id="home" className="bg-[#fffffe] flex flex-col md:flex-row">
-        <div className="container mx-auto text-center px-4 py-16">
+        <div className="container mx-auto px-4 py-16 md:w-1/2 max-w-sm">
           <h1 className="text-[#094067] text-4xl md:text-5xl font-bold mb-8">
             Revolutionize Your Finances with PayWave
           </h1>
@@ -17,8 +17,8 @@ const Main = () => {
             Get started free
           </Button>
         </div>
-        <div className="w-full lg:w-[50%]">
-          <EyePhoneSvg className="w-[80%] mx-auto mb-4" />
+        <div className="w-full md:w-1/2 bg-lime-500 max-h-96">
+          <EyePhoneSvg className="w-[100%] h-full max-h-96 mx-auto mb-4" />
         </div>
       </section>
 
