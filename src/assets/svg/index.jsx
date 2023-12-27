@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import { EyePhoneSvgPropTypes } from "./propTypes"
 
 export const EyePhoneSvg = ({ className }) => {
   return (
@@ -261,6 +261,4 @@ export const EyePhoneSvg = ({ className }) => {
   )
 }
 
-EyePhoneSvg.propTypes = {
-  className: PropTypes.string,
-}
+EyePhoneSvg.propTypes = EyePhoneSvgPropTypes
