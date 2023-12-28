@@ -1,4 +1,4 @@
-import { EyePhoneSvgPropTypes } from "./propTypes"
+import { EyePhoneSvgPropTypes, CircleSvgPropTypes } from "./propTypes"
 
 export const EyePhoneSvg = ({ className }) => {
   return (
@@ -262,3 +262,26 @@ export const EyePhoneSvg = ({ className }) => {
 }
 
 EyePhoneSvg.propTypes = EyePhoneSvgPropTypes
+
+export const CircleSvg = ({ className }) => {
+  return (
+    <svg
+      id="visual"
+      viewBox="0 0 900 900"
+      width="900"
+      height="900"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      className={className}
+    >
+      <g transform="translate(488.24443415803205 470.06681644173045)">
+        <path
+          d="M266.9 -258.2C322.5 -211.2 328.3 -105.6 302 -26.3C275.7 53 217.4 106.1 161.7 145.9C106.1 185.7 53 212.4 -20.5 232.9C-94 253.4 -188.1 267.8 -263.1 227.9C-338.1 188.1 -394 94 -393.6 0.5C-393.1 -93.1 -336.2 -186.2 -261.2 -233.2C-186.2 -280.2 -93.1 -281.1 6.2 -287.3C105.6 -293.6 211.2 -305.2 266.9 -258.2"
+          fill="#327CEB"
+        ></path>
+      </g>
+    </svg>
+  )
+}
+
+CircleSvg.propTypes = CircleSvgPropTypes

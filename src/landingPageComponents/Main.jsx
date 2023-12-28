@@ -1,4 +1,4 @@
-import { EyePhoneSvg } from "../assets/svg"
+import { EyePhoneSvg, CircleSvg } from "../assets/svg"
 import Button from "./reusables/Button"
 
 const Main = () => {
@@ -19,8 +19,17 @@ const Main = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full md:w-1/2 bg-lime-500 max-h-96">
-          <EyePhoneSvg className="w-[100%] h-full max-h-96 mx-auto mb-4" />
+        <div className="w-full lg:w-[55%]">
+          <div className="mt-8 max-h-96 relative">
+            <div className="relative z-40">
+              <EyePhoneSvg className="w-[100%] h-full max-h-96 mx-auto mb-4" />
+            </div>
+            <CircleSvg
+              className={
+                "absolute w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"
+              }
+            />
+          </div>
         </div>
       </section>
 

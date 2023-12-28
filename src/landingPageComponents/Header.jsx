@@ -10,7 +10,7 @@ const Header = () => {
   ]
   let [open, setOpen] = useState(false)
   return (
-    <div className="shadow-md w-full sticky top-0 left-0">
+    <div className="shadow-md w-full sticky top-0 left-0 z-50">
       <div className="md:flex items-center justify-between bg-[#fffffe] py-4 md:px-10 px-7">
         <div
           className="font-bold text-xl cursor-pointer flex items-center
@@ -31,7 +31,7 @@ const Header = () => {
 
         <ul
           className={`font-quicksand md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-[#fffffe] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-            open ? "top-16" : "top-[-490px]"
+            open ? "top-14" : "top-[-490px]"
           }`}
         >
           {Links.map((link) => (
@@ -44,7 +44,7 @@ const Header = () => {
               </a>
             </li>
           ))}
-          <Button className={"ml-8"}>Get Started</Button>
+          <Button className={""}>Get Started</Button>
         </ul>
       </div>
     </div>
