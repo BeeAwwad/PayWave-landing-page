@@ -3,19 +3,21 @@ import Button from "./reusables/Button"
 
 const Main = () => {
   return (
-    <main className="font-quicksand">
+    <main className="font-quicksand mx-auto max-w-lg pt-12 px-5">
       <section id="home" className="bg-[#fffffe] flex flex-col md:flex-row">
-        <div className="container mx-auto px-4 py-16 md:w-1/2 max-w-sm">
-          <h1 className="text-[#094067] text-4xl md:text-5xl font-bold mb-8">
-            Revolutionize Your Finances with PayWave
-          </h1>
-          <p className="text-lg text-[#5f6c7b] mb-8">
-            Streamline your financial transactions, savings, and investments all
-            in one place.
-          </p>
-          <Button onClick={() => {}} className={"w-full lg:w-1/2"}>
-            Get started free
-          </Button>
+        <div className="w-full">
+          <div className="mx-auto mt-5 flex flex-col max-w-sm">
+            <h1 className="text-[#094067] text-4xl md:text-5xl font-bold mb-5">
+              Revolutionize Your Finances with PayWave
+            </h1>
+            <p className="text-lg text-[#5f6c7b] mb-5">
+              Streamline your financial transactions, savings, and investments
+              all in one place.
+            </p>
+            <Button onClick={() => {}} className={"mb-5 pt-4 w-full lg:w-1/2"}>
+              Get started free
+            </Button>
+          </div>
         </div>
         <div className="w-full md:w-1/2 bg-lime-500 max-h-96">
           <EyePhoneSvg className="w-[100%] h-full max-h-96 mx-auto mb-4" />

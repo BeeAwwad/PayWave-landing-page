@@ -38,7 +38,7 @@ const Header = () => {
             <li key={link.name} className="md:ml-8 text-md md:my-0 my-7">
               <a
                 href={link.link}
-                className="text-[#5f6c7b] hover:text-[#ef4565] duration-500"
+                className="text-[#5f6c7b] hover:text-[#C40000] duration-500"
               >
                 {link.name}
               </a>
