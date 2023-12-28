@@ -3,7 +3,7 @@ import Button from "./reusables/Button"
 
 const Main = () => {
   return (
-    <main className="font-quicksand mx-auto max-w-lg pt-12 px-5">
+    <main className="font-quicksand mx-auto max-w-lg md:max-w-4xl pt-12 px-5">
       <section id="home" className="bg-[#fffffe] flex flex-col md:flex-row">
         <div className="w-full">
           <div className="mx-auto mt-5 flex flex-col max-w-sm">
@@ -14,7 +14,10 @@ const Main = () => {
               Streamline your financial transactions, savings, and investments
               all in one place.
             </p>
-            <Button onClick={() => {}} className={"mb-5 pt-4 w-full lg:w-1/2"}>
+            <Button
+              onClick={() => {}}
+              className={"mb-5 pt-4 w-full md:max-w-60"}
+            >
               Get started free
             </Button>
           </div>

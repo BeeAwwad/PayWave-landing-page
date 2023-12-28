@@ -44,7 +44,7 @@ const Header = () => {
               </a>
             </li>
           ))}
-          <Button className={""}>Get Started</Button>
+          <Button className={"md:ml-6"}>Get Started</Button>
         </ul>
       </div>
     </div>
