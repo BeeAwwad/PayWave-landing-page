@@ -7,3 +7,7 @@ export const EyePhoneSvgPropTypes = {
 export const CircleSvgPropTypes = {
   className: PropTypes.string,
 }
+
+export const LogoSvgSvgPropTypes = {
+  className: PropTypes.string,
+}

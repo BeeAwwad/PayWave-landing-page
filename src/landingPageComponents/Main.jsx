@@ -2,8 +2,25 @@ import { EyePhoneSvg, CircleSvg } from "../assets/svg"
 import Button from "./reusables/Button"
 
 const Main = () => {
+  const Benefits = [
+    {
+      id: 1,
+      name: "Unified Financial Hub",
+      ptag: "PayWave combines financial services for easy management of bills, savings, and investments.",
+    },
+    {
+      id: 2,
+      name: "Effortless Transactions",
+      ptag: "PayWave simplifies bills payments for a smooth and hassle-free experience.",
+    },
+    {
+      id: 3,
+      name: "Strong Security",
+      ptag: "PayWave ensures robust security for trusted transactions and data protection.",
+    },
+  ]
   return (
-    <main className="font-quicksand mx-auto max-w-lg md:max-w-4xl pt-12 px-5">
+    <main className="font-quicksand mx-auto max-w-lg md:max-w-4xl lg:max-w-6xl pt-12 px-5">
       <section id="home" className="bg-[#fffffe] flex flex-col md:flex-row">
         <div className="w-full">
           <div className="mx-auto mt-5 flex flex-col max-w-sm">
@@ -22,7 +39,7 @@ const Main = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full lg:w-[55%]">
+        <div className="w-full">
           <div className="mt-8 max-h-96 relative">
             <div className="relative z-40">
               <EyePhoneSvg className="w-[100%] h-full max-h-96 mx-auto mb-4" />
@@ -36,7 +53,21 @@ const Main = () => {
         </div>
       </section>
 
-      <div className="spacer layer1"></div>
+      <section className="mt-12 h-fit bg-indigo-400">
+        <div>
+          {Benefits.map((benefit) => (
+            <div
+              className="p-5 mb-5 bg-rose-300 flex items-center"
+              key={benefit.id}
+            >
+              <div>
+                <img src="" alt="" /> <h1>{benefit.name}</h1>
+              </div>
+              <p className="ml-3">{benefit.ptag}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section id="features" className="py-12 bg-[#d8eefe]">
         <div className="container mx-auto">
