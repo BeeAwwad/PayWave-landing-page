@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Button from "./reusables/Button"
+import { LogoSvg } from "../assets/svg"
 
 const Header = () => {
   const Links = [
@@ -10,16 +11,17 @@ const Header = () => {
   ]
   let [open, setOpen] = useState(false)
   return (
-    <div className="shadow-md w-full sticky top-0 left-0 z-50">
-      <div className="md:flex items-center justify-between bg-[#fffffe] py-4 md:px-10 px-7">
+    <header className="shadow-md w-full sticky top-0 left-0 z-50 h-16 lg:h-14">
+      <div className="md:flex items-center justify-between bg-[#fffffe] py-4 md:px-10 px-7 h-full">
         <div
           className="font-bold text-xl cursor-pointer flex items-center
-          text-[#094067] font-orbitron"
+          text-[#094067] font-orbitron h-full"
         >
           <span className="text-[#094067] mr-1 pt-2">
             {/* <ion-icon name="logo-react"></ion-icon> */}
+            <LogoSvg className={"h-7 w-fit"} />
           </span>
-          PayWave
+          <span className="text-sm">PayWave</span>
         </div>
 
         <div
@@ -47,7 +49,7 @@ const Header = () => {
           <Button className={"md:ml-6"}>Get Started</Button>
         </ul>
       </div>
-    </div>
+    </header>
   )
 }
 

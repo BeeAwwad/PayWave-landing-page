@@ -1,4 +1,7 @@
 import { EyePhoneSvg, CircleSvg } from "../assets/svg"
+import SecurityImage from "../assets/png/security.png"
+import TransferImage from "../assets/png/money-transfer.png"
+import HubImage from "../assets/png/network.png"
 import Button from "./reusables/Button"
 
 const Main = () => {
@@ -7,16 +10,19 @@ const Main = () => {
       id: 1,
       name: "Unified Financial Hub",
       ptag: "PayWave combines financial services for easy management of bills, savings, and investments.",
+      image: HubImage,
     },
     {
       id: 2,
       name: "Effortless Transactions",
       ptag: "PayWave simplifies bills payments for a smooth and hassle-free experience.",
+      image: TransferImage,
     },
     {
       id: 3,
       name: "Strong Security",
       ptag: "PayWave ensures robust security for trusted transactions and data protection.",
+      image: SecurityImage,
     },
   ]
   return (
@@ -31,10 +37,7 @@ const Main = () => {
               Streamline your financial transactions, savings, and investments
               all in one place.
             </p>
-            <Button
-              onClick={() => {}}
-              className={"mb-5 pt-4 w-full md:max-w-60"}
-            >
+            <Button onClick={() => {}} className={"mb-5 w-full md:max-w-60"}>
               Get started free
             </Button>
           </div>
@@ -53,17 +56,23 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="mt-12 h-fit bg-indigo-400">
+      <section className="mt-12 h-fit flex flex-col gap-8">
         <div>
+          <h1 className="text-center font-bold text-4xl">Why Use PayWave?</h1>
+        </div>
+        <div className="flex flex-col gap-8 md:flex-row">
           {Benefits.map((benefit) => (
             <div
-              className="p-5 mb-5 bg-rose-300 flex items-center"
               key={benefit.id}
+              className="p-10 flex flex-col flex-1 gap-5 justify-start items-center bg-[#f5f7fd] rounded-lg hover:bg-[#EF4363] hover:text-[#fffffe] transition ease-out duration-300"
             >
-              <div>
-                <img src="" alt="" /> <h1>{benefit.name}</h1>
-              </div>
-              <p className="ml-3">{benefit.ptag}</p>
+              <img
+                src={benefit.image}
+                alt={benefit.name}
+                className="h-20 w-24 p-3 rounded-md bg-[#fffffe]"
+              />
+              <h1>{benefit.name}</h1>
+              <p>{benefit.ptag}</p>
             </div>
           ))}
         </div>
