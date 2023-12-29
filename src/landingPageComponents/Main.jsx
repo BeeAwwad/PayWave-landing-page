@@ -64,17 +64,23 @@ const Main = () => {
           {Benefits.map((benefit) => (
             <div
               key={benefit.id}
-              className="p-10 flex flex-col flex-1 gap-5 justify-start items-center bg-[#f5f7fd] rounded-lg hover:bg-[#EF4363] hover:text-[#fffffe] transition ease-out duration-300"
+              className="p-10 flex flex-col flex-1 gap-5 justify-start items-center bg-[#f5f7fd] rounded-lg hover:shadow-xl transition ease-out duration-300 shadow-sm"
             >
               <img
                 src={benefit.image}
                 alt={benefit.name}
-                className="h-20 w-24 p-3 rounded-md bg-[#fffffe]"
+                className="h-20 w-24 p-3 rounded-md bg-[#f5f7fd]"
               />
-              <h1>{benefit.name}</h1>
+              <h1 className="font-bold text-xl">{benefit.name}</h1>
               <p>{benefit.ptag}</p>
             </div>
           ))}
+        </div>
+        <div className="flex flex-col md:flex-row md:items-center justify-center p-5">
+          <h2 className="text-center mb-4 md:mb-0 md:mr-5 font-bold text-2xl">
+            Are you ready to PayWave?
+          </h2>
+          <Button className={""}>Get started</Button>
         </div>
       </section>
 
