@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
         orbitron: ["Orbitron", "sans-serif"],
+        poppins: ["Poppin", "sans-serif"],
       },
       maxWidth: {
         1500: "1500px",

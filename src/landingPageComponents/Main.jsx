@@ -67,18 +67,22 @@ const Main = () => {
     },
   ]
   return (
-    <main className="font-quicksand mx-auto max-w-lg md:max-w-4xl lg:max-w-6xl pt-12 px-5">
-      <section id="home" className="bg-[#fffffe] flex flex-col md:flex-row">
+    <main className="font-poppins mx-auto max-w-lg md:max-w-4xl lg:max-w-6xl pt-12 px-5">
+      <section id="home" className=" flex flex-col md:flex-row">
         <div className="w-full">
           <div className="mx-auto mt-5 flex flex-col max-w-sm">
-            <h1 className="text-[#094067] text-4xl md:text-5xl font-bold mb-5">
-              Revolutionize Your Finances with PayWave
+            <h1 className="text-[#094067] text-4xl md:text-5xl font-bold">
+              <span className="text-[#327CEB]">Revolutionize</span> Your
+              Finances with <span className="text-[#327CEB]">PayWave</span>
             </h1>
-            <p className="text-lg text-[#5f6c7b] mb-5">
+            <p className="text-lg text-[#5f6c7b] mt-5 md:mt-7">
               Streamline your financial transactions, savings, and investments
               all in one place.
             </p>
-            <Button onClick={() => {}} className={"mb-5 w-full md:max-w-60"}>
+            <Button
+              onClick={() => {}}
+              className={"mt-5 md:mt-7 w-full md:max-w-60"}
+            >
               Get started free
             </Button>
           </div>
