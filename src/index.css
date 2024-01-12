@@ -16,3 +16,9 @@
 .layer1 {
   background-image: url(./assets/svg/layered-waves-haikei.svg);
 }
+
+.button-hovered {
+  background-color: #327ceb;
+  color: #fffffe;
+  border-color: #327ceb;
+}

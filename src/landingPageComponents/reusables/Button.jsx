@@ -1,4 +1,6 @@
 import PropTypes from "prop-types"
+import { AppleStoreSvg, PlayStoreSvg } from "../../assets/svg"
+import { UseHoverContext } from "../../context/HoverContext"
 
 const Button = ({ children, onClick, className }) => {
   return (
@@ -11,10 +13,35 @@ const Button = ({ children, onClick, className }) => {
   )
 }
 
+const NewButton = ({ className, children }) => {
+  const { isHovered, handleMouseOver, handleMouseOut } = UseHoverContext()
+  return (
+    <button
+      className={`px-4 py-2 border-2 border-[#002C6E] rounded-full bg-[#fffffe]  text-[#002C6E]   transition duration-300 ease-in-out ${
+        isHovered && "button-hovered"
+      } ${className}`}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
+      <div className="flex items-center justify-center">
+        <AppleStoreSvg className="h-5 w-fit mr-1" />
+        <PlayStoreSvg className="h-5  w-fit mr-1" />
+        <span>{children}</span>
+      </div>
+    </button>
+  )
+}
+
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
   className: PropTypes.string,
 }
 
-export default Button
+NewButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
+}
+
+export { Button, NewButton }

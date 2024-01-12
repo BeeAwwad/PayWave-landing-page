@@ -1,5 +1,5 @@
 import { EyePhoneSvg, CircleSvg } from "../assets/svg"
-import Button from "./reusables/Button"
+import { Button } from "./reusables/Button"
 // Benefits images
 import SecurityImage from "../assets/png/security.png"
 import TransferImage from "../assets/png/money-transfer.png"
@@ -68,7 +68,10 @@ const Main = () => {
   ]
   return (
     <main className="font-poppins mx-auto max-w-lg md:max-w-4xl lg:max-w-6xl pt-12 px-5">
-      <section id="home" className=" flex flex-col md:flex-row">
+      <section
+        id="home"
+        className="bg-gradient-to-b from-[#DCEAFF]  to-[#fffffe] flex flex-col md:flex-row"
+      >
         <div className="w-full">
           <div className="mx-auto mt-5 flex flex-col max-w-sm">
             <h1 className="text-[#094067] text-4xl md:text-5xl font-bold">
@@ -161,7 +164,9 @@ const Main = () => {
           <h2 className="text-center mb-4 md:mb-0 md:mr-5 font-bold text-2xl">
             Are you ready to PayWave?
           </h2>
-          <Button className={""}>Get started</Button>
+          <Button onClick={() => {}} className={""}>
+            Get started
+          </Button>
         </div>
       </section>
 

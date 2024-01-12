@@ -1,6 +1,7 @@
 import { useState } from "react"
-import Button from "./reusables/Button"
+import { Button, NewButton } from "./reusables/Button"
 import { LogoSvg } from "../assets/svg"
+import { HoverProvider } from "../context/HoverContext"
 
 const Header = () => {
   const Links = [
@@ -30,7 +31,7 @@ const Header = () => {
         </div>
 
         <ul
-          className={`font-quicksand md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static bg-[#fffffe] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          className={`font-poppins md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static bg-[#fffffe] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
             open ? "top-14" : "top-[-490px]"
           }`}
         >
@@ -46,9 +47,11 @@ const Header = () => {
           ))}
           {open ? <Button className={"md:ml-6"}>Get Started</Button> : null}
         </ul>
-        <Button className={"hidden md:block md:ml-6"} onClick={() => {}}>
-          Get Started
-        </Button>
+        <HoverProvider>
+          <NewButton className={"hidden md:block md:ml-6"} onClick={() => {}}>
+            Get Started
+          </NewButton>
+        </HoverProvider>
       </div>
     </header>
   )
