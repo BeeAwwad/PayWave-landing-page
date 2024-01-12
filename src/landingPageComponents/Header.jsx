@@ -11,8 +11,8 @@ const Header = () => {
   ]
   let [open, setOpen] = useState(false)
   return (
-    <header className="w-full sticky top-0 left-0 z-50 h-16 lg:h-fit">
-      <div className="md:flex items-center justify-between bg-[#fffffe] py-4 md:px-10 px-7 h-full">
+    <header className="w-full top-0 left-0 z-50 h-fit bg-[#DCEAFF]">
+      <div className="md:flex items-center justify-between py-4 md:px-10 px-7 h-full">
         <div
           className="font-bold text-xl cursor-pointer flex items-center
           text-[#094067] font-orbitron h-full"
@@ -31,7 +31,7 @@ const Header = () => {
         </div>
 
         <ul
-          className={`font-poppins md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static bg-[#fffffe] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          className={`font-poppins md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static md:z-auto z-40 bg-[#DCEAFF] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
             open ? "top-14" : "top-[-490px]"
           }`}
         >
@@ -48,7 +48,10 @@ const Header = () => {
           {open ? <Button className={"md:ml-6"}>Get Started</Button> : null}
         </ul>
         <HoverProvider>
-          <NewButton className={"hidden md:block md:ml-6"} onClick={() => {}}>
+          <NewButton
+            className={"hidden md:block md:ml-6 bg-transparent"}
+            onClick={() => {}}
+          >
             Get Started
           </NewButton>
         </HoverProvider>

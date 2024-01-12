@@ -1,5 +1,6 @@
-import { EyePhoneSvg, CircleSvg } from "../assets/svg"
-import { Button } from "./reusables/Button"
+import { Button, NewButton } from "./reusables/Button"
+import { HoverProvider } from "../context/HoverContext"
+import iphoneImage from "../assets/png/iPhone15.png"
 // Benefits images
 import SecurityImage from "../assets/png/security.png"
 import TransferImage from "../assets/png/money-transfer.png"
@@ -67,38 +68,39 @@ const Main = () => {
     },
   ]
   return (
-    <main className="font-poppins mx-auto max-w-lg md:max-w-4xl lg:max-w-6xl pt-12 px-5">
+    <main className="font-poppins w-full">
       <section
         id="home"
-        className="bg-gradient-to-b from-[#DCEAFF]  to-[#fffffe] flex flex-col md:flex-row"
+        className="bg-gradient-to-b from-[#DCEAFF]  to-[#fffffe] flex flex-col"
       >
         <div className="w-full">
-          <div className="mx-auto mt-5 flex flex-col max-w-sm">
-            <h1 className="text-[#094067] text-4xl md:text-5xl font-bold">
-              <span className="text-[#327CEB]">Revolutionize</span> Your
-              Finances with <span className="text-[#327CEB]">PayWave</span>
-            </h1>
-            <p className="text-lg text-[#5f6c7b] mt-5 md:mt-7">
-              Streamline your financial transactions, savings, and investments
-              all in one place.
-            </p>
-            <Button
-              onClick={() => {}}
-              className={"mt-5 md:mt-7 w-full md:max-w-60"}
-            >
-              Get started free
-            </Button>
+          <div className="mt-5 flex flex-col max-w-6xl mx-auto items-center">
+            <div className="text-center mx-16 mt-24 lg:mt-32">
+              <h1 className="text-[#094067] text-5xl md:text-6xl font-bold">
+                <span className="text-[#327CEB]">Revolutionize</span> Your
+                Finances with <span className="text-[#327CEB]">PayWave</span>
+              </h1>
+              <p className="text-lg text-[#5f6c7b] mt-7 max-w-2xl mx-auto">
+                Streamline your financial transactions, savings, and investments
+                all in one place.
+              </p>
+            </div>
+            <HoverProvider>
+              <NewButton
+                onClick={() => {}}
+                className={"mt-9 mb-8 w-fit bg-transparent border-[#327ceb]"}
+              >
+                Download here
+              </NewButton>
+            </HoverProvider>
           </div>
         </div>
         <div className="w-full">
-          <div className="mt-8 max-h-96 relative">
-            <div className="relative z-40">
-              <EyePhoneSvg className="w-[100%] h-full max-h-96 mx-auto mb-4" />
-            </div>
-            <CircleSvg
-              className={
-                "absolute w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"
-              }
+          <div className="mt-8 mx-auto max-h-[400px] w-fit overflow-hidden">
+            <img
+              className="h-fit w-72 shadow-2xl"
+              src={iphoneImage}
+              alt="iphone-15"
             />
           </div>
         </div>

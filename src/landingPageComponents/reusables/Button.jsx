@@ -17,16 +17,16 @@ const NewButton = ({ className, children }) => {
   const { isHovered, handleMouseOver, handleMouseOut } = UseHoverContext()
   return (
     <button
-      className={`px-4 py-2 border-2 border-[#002C6E] rounded-full bg-[#fffffe]  text-[#002C6E]   transition duration-300 ease-in-out ${
+      className={`h-full px-4 py-2 border-2 border-[#002C6E] rounded-full bg-[#fffffe]  text-[#002C6E]   transition duration-300 ease-in-out ${
         isHovered && "button-hovered"
       } ${className}`}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center w-fit">
         <AppleStoreSvg className="h-5 w-fit mr-1" />
         <PlayStoreSvg className="h-5  w-fit mr-1" />
-        <span>{children}</span>
+        <span className="flex-shrink-0 md:text-sm">{children}</span>
       </div>
     </button>
   )
