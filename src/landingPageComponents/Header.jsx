@@ -16,6 +16,7 @@ const Header = () => {
     const scrollThreshold = 50
 
     const handleScroll = () => {
+      // Check if the header has been scrolled down
       if (window.scrollY > scrollThreshold) {
         header.classList.add("sticky-scroll-down")
       } else {
@@ -23,6 +24,7 @@ const Header = () => {
       }
     }
 
+    // Add the scroll event listener
     window.addEventListener("scroll", handleScroll)
 
     // Cleanup the event listener when the component is unmounted
@@ -33,7 +35,9 @@ const Header = () => {
   return (
     <header
       id="headerId"
-      className="w-full sticky top-0 left-0 z-50 h-fit bg-[#DCEAFF]"
+      className={`w-full sticky top-0 left-0 z-50 h-fit ${
+        open ? "bg-[#fffffe]" : "bg-[#DCEAFF]"
+      }`}
     >
       <div className="md:flex items-center justify-between py-4 md:px-10 px-7 h-full">
         <div
@@ -54,8 +58,8 @@ const Header = () => {
         </div>
 
         <ul
-          className={`font-poppins md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static md:z-auto z-40 bg-transparent left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-            open ? "top-14" : "top-[-490px]"
+          className={`font-poppins md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static md:z-auto z-40    left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+            open ? "top-14 shadow-md bg-[#fffffe]" : "top-[-490px]"
           }`}
         >
           {Links.map((link) => (

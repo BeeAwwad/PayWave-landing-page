@@ -1,35 +1,33 @@
-import { Button, NewButton } from "./reusables/Button"
+import { NewButton } from "./reusables/Button"
 import { HoverProvider } from "../context/HoverContext"
 import iphoneImage from "../assets/png/iPhone15.png"
-// Benefits images
-import SecurityImage from "../assets/png/security.png"
-import TransferImage from "../assets/png/money-transfer.png"
-import HubImage from "../assets/png/network.png"
+
 // Features images
 import CuttingEdgeImage from "../assets/png/cutting-edge.png"
 import BillsImage from "../assets/png/bills.png"
 import FlexibilityImage from "../assets/png/flexibility.png"
 import UserExImage from "../assets/png/user-ex.png"
+import { DoubleCircleeSvg } from "../assets/svg"
 
 const Main = () => {
   const Benefits = [
     {
       id: 1,
       name: "Unified Financial Hub",
-      ptag: "PayWave combines financial services for easy management of bills, savings, and investments.",
-      image: HubImage,
+      ptag: "Combine your financial services for easy management of bills, savings, and investments.",
+      image: null,
     },
     {
       id: 2,
       name: "Effortless Transactions",
-      ptag: "PayWave simplifies bills payments for a smooth and hassle-free experience.",
-      image: TransferImage,
+      ptag: "Simplify your bills payments for a smooth and hassle-free experience.",
+      image: null,
     },
     {
       id: 3,
       name: "Strong Security",
-      ptag: "PayWave ensures robust security for trusted transactions and data protection.",
-      image: SecurityImage,
+      ptag: "Enjoy peace of mind with PayWave, ensuring the highest level of security for your transactions and valuable data.",
+      image: null,
     },
   ]
 
@@ -106,69 +104,74 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="mt-12 h-fit flex flex-col gap-8 mb-8">
-        <div>
-          <h1 className="text-center font-bold text-4xl">Why Use PayWave?</h1>
-        </div>
-        <div className="flex flex-col gap-8 md:flex-row">
+      <section className="my-24 xl:my-36 mx-7 md:mx-10 h-fit flex flex-col gap-8 mb-8">
+        <div className="flex flex-col gap-8 lg:flex-row">
           {Benefits.map((benefit) => (
             <div
               key={benefit.id}
-              className="p-10 flex flex-col flex-1 gap-5 justify-start items-center bg-[#f5f7fd] rounded-lg hover:shadow-lg transition ease-out duration-300 shadow-sm"
+              className="p-6 flex flex-1 gap-5 items-center rounded-lg hover:shadow-md transition ease-out duration-300 shadow-sm"
             >
-              <img
-                src={benefit.image}
-                alt={benefit.name}
-                className="h-20 w-24 p-3 rounded-md bg-[#f5f7fd] "
-              />
-              <h1 className="font-bold text-xl">{benefit.name}</h1>
-              <p>{benefit.ptag}</p>
+              <div className="lg:hidden xl:block">
+                <DoubleCircleeSvg className={"w-16"} />
+              </div>
+              <div>
+                <h1 className="text-[#094067] font-bold text-xl lg:text-3xl">
+                  {benefit.name}
+                </h1>
+                <p className="text-base text-[#5f6c7b]">{benefit.ptag}</p>
+              </div>
             </div>
           ))}
         </div>
+        <p className="text-[#094067] mt-20 lg:mt-24 max-w-[500px] lg:max-w-[832px] text-center font-semibold self-center text-2xl lg:text-4xl">
+          Buy Airtime and Data, pay TV subscriptions and electricity bills all
+          on the Paywave app.
+        </p>
       </section>
 
-      <section id="features" className="py-12">
-        <div className="container mx-auto mb-8">
-          <div className="text-[#094067]  mb-8">
-            <h2 className="text-3xl font-bold text-center">
-              Enjoy these features
-            </h2>
-            <p className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, quos officia a harum.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8">
-            {Features.map((feature) => (
-              <div
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
-                key={feature.id}
-              >
-                <div className="h-60 rounded-md overflow-hidden px-5">
-                  <img
-                    className="w-full h-full object-cover rounded-md"
-                    src={feature.image}
-                    alt={feature.name}
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-xl text-[#094067] font-semibold mb-2">
-                    {feature.name}
-                  </h3>
-                  <p className="text-[#5f6c7b]">{feature.ptag}</p>
-                </div>
+      <section id="features" className="flex items-center justify-center">
+        <div className="max-w-[1050px] mx-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 text-[#fffffe]">
+            <div
+              className="bg-[#002C6E] md:col-span-2 md:row-span-1 p-14 rounded-3xl"
+              key={Features[0].id}
+            >
+              <h3 className="text-2xl lg:text-4xl  font-semibold mb-2">
+                {Features[0].name}
+              </h3>
+              <p className="mt-7">{Features[0].ptag}</p>
+              <div>
+                <HoverProvider>
+                  <NewButton
+                    className={"hidden md:block mt-6 lg:mt-8"}
+                    onClick={() => {}}
+                  >
+                    Get the app
+                  </NewButton>
+                </HoverProvider>
               </div>
-            ))}
+            </div>
+
+            <div
+              className="bg-[#DCEAFF] text-[#002C6E] md:max-w-lg md:row-span-1 p-14 rounded-3xl"
+              key={Features[1].id}
+            >
+              <h3 className="text-2xl lg:text-4xl  font-semibold mb-2">
+                {Features[1].name}
+              </h3>
+              <p className="mt-7">{Features[1].ptag}</p>
+            </div>
+
+            <div
+              className="bg-[#327CEB] md:max-w-lg p-14 rounded-3xl"
+              key={Features[2].id}
+            >
+              <h3 className="text-2xl lg:text-4xl font-semibold mb-2">
+                {Features[2].name}
+              </h3>
+              <p className="mt-7">{Features[2].ptag}</p>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row md:items-center justify-center p-5">
-          <h2 className="text-center mb-4 md:mb-0 md:mr-5 font-bold text-2xl">
-            Are you ready to PayWave?
-          </h2>
-          <Button onClick={() => {}} className={""}>
-            Get started
-          </Button>
         </div>
       </section>
 
