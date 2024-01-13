@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button, NewButton } from "./reusables/Button"
 import { LogoSvg } from "../assets/svg"
 import { HoverProvider } from "../context/HoverContext"
@@ -10,8 +10,31 @@ const Header = () => {
     { name: "FAQ", link: "#FAQ" },
   ]
   let [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    const header = document.querySelector("#headerId")
+    const scrollThreshold = 50
+
+    const handleScroll = () => {
+      if (window.scrollY > scrollThreshold) {
+        header.classList.add("sticky-scroll-down")
+      } else {
+        header.classList.remove("sticky-scroll-down")
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    // Cleanup the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
   return (
-    <header className="w-full top-0 left-0 z-50 h-fit bg-[#DCEAFF]">
+    <header
+      id="headerId"
+      className="w-full sticky top-0 left-0 z-50 h-fit bg-[#DCEAFF]"
+    >
       <div className="md:flex items-center justify-between py-4 md:px-10 px-7 h-full">
         <div
           className="font-bold text-xl cursor-pointer flex items-center
@@ -31,7 +54,7 @@ const Header = () => {
         </div>
 
         <ul
-          className={`font-poppins md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static md:z-auto z-40 bg-[#DCEAFF] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          className={`font-poppins md:flex md:items-center md:gap-10 lg:gap-20 md:pb-0 pb-12 absolute md:static md:z-auto z-40 bg-transparent left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
             open ? "top-14" : "top-[-490px]"
           }`}
         >
