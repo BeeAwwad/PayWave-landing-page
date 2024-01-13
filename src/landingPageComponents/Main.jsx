@@ -1,6 +1,7 @@
 import { NewButton } from "./reusables/Button"
 import { HoverProvider } from "../context/HoverContext"
 import iphoneImage from "../assets/png/iPhone15.png"
+import { useEffect } from "react"
 
 // Features images
 import CuttingEdgeImage from "../assets/png/cutting-edge.png"
@@ -65,6 +66,27 @@ const Main = () => {
       image: CuttingEdgeImage,
     },
   ]
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show")
+        } else {
+          entry.target.classList.remove("show")
+        }
+      })
+    })
+
+    const hiddenElements = document.querySelectorAll(".hidden")
+    hiddenElements.forEach((el) => observer.observe(el))
+
+    return () => {
+      // Cleanup the observer when the component is unmounted
+      hiddenElements.forEach((el) => observer.unobserve(el))
+    }
+  }, []) // Empty dependency array means this effect runs once after initial render
+
   return (
     <main className="font-poppins w-full bg-[#fffffe]">
       <section
@@ -95,14 +117,16 @@ const Main = () => {
         </div>
         <div className="w-full relative">
           <div className="mt-8 mx-auto max-h-[400px] w-fit overflow-hidden">
-            <img
-              id="iphoneId"
-              className="h-fit w-72 box-shadow-left3xl"
-              src={iphoneImage}
-              alt="iphone-15"
-            />
-            <div className="hidden  xl:flex absolute bottom-12 right-32 2xl:bottom-16 2xl:right-80 2xl:mr-16">
-              <PlayStoreTag className={"mr-5"} />
+            <div className="h-fit w-72 box-shadow-left3xl">
+              <img
+                id="iphoneId"
+                className="h-fit w-fit"
+                src={iphoneImage}
+                alt="iphone-15"
+              />
+            </div>
+            <div className="hidden  xl:flex absolute bottom-12 right-32 2xl:bottom-16 2xl:right-60 2xl:mr-16">
+              <PlayStoreTag className={"mr-4"} />
               <AppleStoreTag />
             </div>
           </div>
