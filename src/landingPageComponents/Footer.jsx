@@ -10,19 +10,21 @@ const Footer = () => {
     <>
       <footer className="bg-[#002C6E] text-[#fffffe] rounded-t-3xl">
         <div className=" w-full p-20">
-          <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
+          <div className="flex flex-col lg:flex-row lg:justify-between">
+            <div className="self-center mb-10 lg:mb-0">
               <a href="#" className="flex items-center">
                 <WhiteLogo className="h-8 mr-1" />
-                <span className="self-center text-2xl lg:text-4xl font-semibold whitespace-nowrap ">
+                <span className="self-center text-4xl font-semibold whitespace-nowrap ">
                   PayWave
                 </span>
               </a>
             </div>
 
-            <div>
-              <h2 className="mb-6 text-3xl font-semibold uppercase">Company</h2>
-              <ul className="font-medium text-xl">
+            <div className="mb-10 lg:mb-0">
+              <h2 className="mb-6 text-3xl font-semibold  text-center">
+                Company
+              </h2>
+              <ul className="font-medium text-xl text-center">
                 <li className="mb-3">
                   <a href="#" className="hover:underline">
                     About Us
@@ -45,11 +47,12 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
-              <h2 className="mb-6 text-3xl font-semibold uppercase">
+
+            <div className="mb-10 lg:mb-0">
+              <h2 className="mb-6 text-3xl font-semibold text-center">
                 Need Help?
               </h2>
-              <ul className="text-xl font-medium">
+              <ul className="text-xl text-center font-medium">
                 <li className="mb-3">
                   <a href="" className="hover:underline">
                     help@paywave.com
@@ -58,10 +61,10 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-3xl font-semibold uppercase text-center">
+              <h2 className="mb-6 text-3xl font-semibold  text-center">
                 Socials
               </h2>
-              <div className="font-medium text-xl flex">
+              <div className="font-medium text-xl flex items-center lg:items-start justify-center lg:justify-normal">
                 <InstagramLogo className={"mr-4"} />
                 <TwitterLogo className={"mr-4"} />
                 <FacebookLogo />
