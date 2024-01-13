@@ -7,7 +7,7 @@ import CuttingEdgeImage from "../assets/png/cutting-edge.png"
 import BillsImage from "../assets/png/bills.png"
 import FlexibilityImage from "../assets/png/flexibility.png"
 import UserExImage from "../assets/png/user-ex.png"
-import { DoubleCircleeSvg } from "../assets/svg"
+import { AppleStoreTag, DoubleCircleeSvg, PlayStoreTag } from "../assets/svg"
 
 const Main = () => {
   const Benefits = [
@@ -66,7 +66,7 @@ const Main = () => {
     },
   ]
   return (
-    <main className="font-poppins w-full">
+    <main className="font-poppins w-full bg-[#fffffe]">
       <section
         id="home"
         className="bg-gradient-to-b from-[#DCEAFF]  to-[#fffffe] flex flex-col"
@@ -93,13 +93,18 @@ const Main = () => {
             </HoverProvider>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full relative">
           <div className="mt-8 mx-auto max-h-[400px] w-fit overflow-hidden">
             <img
-              className="h-fit w-72 shadow-2xl"
+              id="iphoneId"
+              className="h-fit w-72 box-shadow-left3xl"
               src={iphoneImage}
               alt="iphone-15"
             />
+            <div className="hidden  xl:flex absolute bottom-12 right-32 2xl:bottom-16 2xl:right-80 2xl:mr-16">
+              <PlayStoreTag className={"mr-5"} />
+              <AppleStoreTag />
+            </div>
           </div>
         </div>
       </section>
@@ -175,42 +180,15 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="bg-white dark:bg-gray-900">
-        <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-          <figure className="max-w-screen-md mx-auto">
-            <svg
-              className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-              viewBox="0 0 24 27"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                fill="currentColor"
-              />
-            </svg>
-            <blockquote>
-              <p className="text-2xl font-medium text-gray-900 dark:text-white">
-                `Using PayWave has made managing my finances a breeze. No more
-                juggling multiple platforms!`
-              </p>
-            </blockquote>
-            <figcaption className="flex items-center justify-center mt-6 space-x-3">
-              <img
-                className="w-6 h-6 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                alt="profile picture"
-              />
-              <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div className="pr-3 font-medium text-gray-900 dark:text-white">
-                  Micheal Gough
-                </div>
-                <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
-                  CEO at Google
-                </div>
-              </div>
-            </figcaption>
-          </figure>
+      <section className="flex flex-col items-center justify-center bg-gradient-to-t from-[#DCEAFF]  to-[#fffffe] h-fit mt-24 py-24 px-16">
+        <p className="text-[#094067] text-center max-w-4xl text-5xl">
+          What are you waiting for? Download the{" "}
+          <span className="text-[#327CEB]">Paywave</span> App and get started
+          now
+        </p>
+        <div className="flex gap-6 mt-16 z-40">
+          <AppleStoreTag className={"h-32 w-44"} />
+          <PlayStoreTag className={"h-32 w-44"} />
         </div>
       </section>
 

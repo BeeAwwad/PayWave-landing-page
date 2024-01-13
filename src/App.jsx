@@ -4,7 +4,7 @@ import Header from "./landingPageComponents/Header"
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="App bg-[#DCEAFF]">
       <Header />
       <Main />
       <Footer />
